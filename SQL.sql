@@ -51,3 +51,15 @@ ALTER TABLE Product ADD Category VARCHAR2(20);
 
 ALTER TABLE Orders ADD OrderDate DATE DEFAULT SYSDATE;
 
+
+
+
+INSERT INTO Customer VALUES ('C01','Ali', 71321009);
+INSERT INTO Customer VALUES ('C02','ASMA', 77345823);
+
+INSERT INTO Product VALUES ('P01','Samsung Galaxy S20',3299, 'Smartphone' );
+INSERT INTO Product VALUES ('P02','Asus Notebook', 4599,'PC' );
+
+
+INSERT INTO Orders (customerID, ProductID, Quantity, Total_amount) VALUES ('C01', 'P02', 2, 9198);
+INSERT INTO Orders (customerID, ProductID, OrderDate, Quantity, Total_amount) VALUES ('C02', 'P01', TO_DATE('28-MAY-2020', 'DD-MON-YYYY'), 1, 3299);
